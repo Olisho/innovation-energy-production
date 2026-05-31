@@ -1,0 +1,37 @@
+\begin{table}[htbp]\centering
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\caption{Panel Regression Results: Energy Production on R&D Intensity}
+\begin{tabular}{l*{5}{c}}
+\toprule
+            &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c}{(4)}&\multicolumn{1}{c}{(5)}\\
+            &\multicolumn{1}{c}{OLS}&\multicolumn{1}{c}{FE}&\multicolumn{1}{c}{FE+Time}&\multicolumn{1}{c}{RE}&\multicolumn{1}{c}{FE-Log}\\
+\midrule
+number\_of\_researchers&       2.825         &       25.49\sym{***}&       33.72\sym{***}&       23.87\sym{***}&                     \\
+            &     (6.650)         &     (4.213)         &     (6.775)         &     (4.176)         &                     \\
+\addlinespace
+2005.year   &                     &                     &           0         &                     &                     \\
+            &                     &                     &         (.)         &                     &                     \\
+\addlinespace
+2010.year   &                     &                     &      -388.9         &                     &                     \\
+            &                     &                     &    (7286.1)         &                     &                     \\
+\addlinespace
+2015.year   &                     &                     &     -8095.3         &                     &                     \\
+            &                     &                     &    (8468.4)         &                     &                     \\
+\addlinespace
+2022.year   &                     &                     &    -15354.7         &                     &                     \\
+            &                     &                     &   (10795.4)         &                     &                     \\
+\addlinespace
+ln\_rd       &                     &                     &                     &                     &       0.336\sym{**} \\
+            &                     &                     &                     &                     &     (0.141)         \\
+\addlinespace
+\_cons      &     81977.3\sym{***}&      5184.6         &    -16756.9         &     10667.0         &       8.466\sym{***}\\
+            &   (28089.6)         &   (14487.0)         &   (19911.9)         &   (41884.8)         &     (1.085)         \\
+\midrule
+\(N\)       &          24         &          24         &          24         &          24         &          24         \\
+\(R^{2}\)   &       0.008         &       0.683         &       0.734         &                     &       0.252         \\
+adj. \(R^{2}\)&      -0.037         &       0.571         &       0.562         &                     &      -0.012         \\
+\bottomrule
+\multicolumn{6}{l}{\footnotesize Standard errors in parentheses}\\
+\multicolumn{6}{l}{\footnotesize \sym{*} \(p<0.1\), \sym{**} \(p<0.05\), \sym{***} \(p<0.01\)}\\
+\end{tabular}
+\end{table}
